@@ -1,0 +1,20 @@
+<?php
+/*
+ * Copyright © Websolute spa. All rights reserved.
+ * See LICENSE and/or COPYING.txt for license details.
+ */
+
+/**
+ * @var \Magento\Sales\Block\Adminhtml\Order\View\Info $block
+ */
+
+use Websolute\TransporterMagentoOrder\Model\GetOrderToSendCollection;
+
+$order = $block->getOrder();
+?>
+
+<tr>
+    <th><?= $block->escapeHtml(__('Transporter Status')) ?></th>
+    <td><?= $order->getData(GetOrderToSendCollection::TRANSPORTER_EXPORTED) ?? __('To send') ?></td>
+</tr>
+

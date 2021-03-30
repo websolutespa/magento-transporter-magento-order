@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © Websolute spa. All rights reserved.
+  ~ See LICENSE and/or COPYING.txt for license details.
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Websolute_TransporterMagentoOrder::order_send"
+                          title="Transporter Order Send"
+                          translate="title"
+                          sortOrder="10">
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

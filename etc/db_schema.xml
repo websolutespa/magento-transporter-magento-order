@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © Websolute spa. All rights reserved.
+  ~ See LICENSE and/or COPYING.txt for license details.
+  -->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sales_order" resource="sales">
+        <column xsi:type="varchar"
+                name="transporter_exported"
+                nullable="true"
+                comment="Transporter Exported"/>
+    </table>
+</schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © Websolute spa. All rights reserved.
+  ~ See LICENSE and/or COPYING.txt for license details.
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Websolute\TransporterMagentoOrder\Api\GetOrderCollectionInterface"
+                type="Websolute\TransporterMagentoOrder\Model\GetOrderCollection"/>
+    <preference for="Websolute\TransporterMagentoOrder\Api\GetOrderItemCollectionInterface"
+                type="Websolute\TransporterMagentoOrder\Model\GetOrderItemCollection"/>
+    <preference for="Websolute\TransporterMagentoOrder\Api\GetOrderToSendCollectionInterface"
+                type="Websolute\TransporterMagentoOrder\Model\GetOrderToSendCollection"/>
+
+    <type name="Magento\Sales\Block\Adminhtml\Order\View">
+        <plugin name="sales_order_adminhtml_view_transporter_send_order"
+                type="Websolute\TransporterMagentoOrder\Plugin\Sales\Block\Adminhtml\Order\View"/>
+    </type>
+</config>
